@@ -5,13 +5,18 @@ import './divider.css'
 /**
  * Primary UI component for user interaction
  */
-export const Divider = ({ strength, thick, ...props }) => {
+export const Divider = ({ strength, thick, color, ...props }) => {
 
   return (
     <hr
       className={['storybook-divider', `storybook-divider--${thick}`, `storybook-divider--${strength}`].join(
         ' '
       )}
+      style={{
+        borderColor: color,
+        backgroundColor: color,
+        color: color,
+      }}
       {...props}
       />
   )
@@ -23,7 +28,7 @@ Divider.propTypes = {
    */
   thick: PropTypes.oneOf(['thin', 'medium', 'thick']),
   /**
-   * light or dark line?
+   * light or dark line? Dark is the default color.
    */
   strength: PropTypes.oneOf(['light', 'dark']),
 }
@@ -31,4 +36,5 @@ Divider.propTypes = {
 Divider.defaultProps = {
   thick: null,
   strength: null,
+  color: '#9b9b9b',
 }

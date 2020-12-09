@@ -6,7 +6,7 @@ export default {
   title: 'Example/Divider',
   component: Divider,
   argTypes: {
-    backgroundColor: { control: 'color' }
+    color: { control: 'color' }
   }
 }
 
@@ -14,7 +14,7 @@ const Template = (args) => <Divider {...args} />
 
 export const Thin = Template.bind({})
 Thin.args = {
-  thick:'thin',
+  thick: 'thin',
 }
 
 export const Medium = Template.bind({})
@@ -30,9 +30,12 @@ Thick.args = {
 export const Light = Template.bind({})
 Light.args = {
   strength: 'light',
+  thick: 'medium',
 }
 
 export const Dark = Template.bind({})
 Dark.args = {
   strength: 'dark',
+  thick: 'medium',
 }
+

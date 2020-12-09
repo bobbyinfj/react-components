@@ -1,7 +1,7 @@
 .storybook-divider {
     border: none;
-    background-color: #9b9b9b;
-    color: #9b9b9b;
+    /* background-color: #9b9b9b;
+    color: #9b9b9b; */
     height: 1px;
 }
 
@@ -16,8 +16,7 @@
 }
 
 .storybook-divider--light {
- background-color: rgb(226, 226, 226); 
- color: rgb(226, 226, 226); 
+ opacity: 0.5;
 }
 
 .storybook-divider--dark {
